@@ -23,7 +23,7 @@ const htmlPages = pages.map(page => {
 	return new HtmlWebpackPlugin({
 		template: `${PATHS.src}/html/${page}.ejs`,
 		filename: `./${page}.html`, // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
-		favicon: `${PATHS.src}/assets/icons/favicon.svg`,
+		favicon: `${PATHS.src}/assets/icons/logo.svg`,
 	});
 });
 
@@ -36,7 +36,7 @@ const plugins = [
 	new HtmlWebpackPlugin({
 		template: `${PATHS.src}/html/index.ejs`,
 		filename: './index.html', // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
-		favicon: `${PATHS.src}/assets/icons/favicon.svg`,
+		favicon: `${PATHS.src}/assets/icons/logo.svg`,
 	}),
 
 	...htmlPages,

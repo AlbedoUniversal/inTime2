@@ -1,0 +1,25 @@
+.text-block {
+	display: flex;
+	padding: 54px 24px;
+	&__left {
+		flex-basis: 30%;
+	}
+
+	&__left-text {
+		font-weight: 700;
+		font-size: 15.93px;
+		line-height: 19px;
+		color: #CCCCCC;
+	}
+	
+	&__right {
+		flex-basis: 70%;
+	}
+
+	&__right-text {
+		font-weight: 500;
+		font-size: 25.488px;
+		line-height: 130%;
+		color: #222222;
+	}
+}
