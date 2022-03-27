@@ -1,0 +1,119 @@
+.contacts {
+	padding: 50px 0 70px 0;
+	.contacts__items--mobile {
+		display: none;
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		&--real-page {
+			@media screen and (max-width: 1200px) {
+				.contacts__items {
+					flex-basis: 100%;
+					flex-direction: row;
+				}
+			}
+
+			@media screen and (max-width: $tableWidth) {
+				.contacts__items {
+					display: none;
+				}
+				.contacts__items--mobile {
+					display: block;
+					.contacts__item {
+						max-width: 100%;
+					}
+
+					.contacts__item-subheading-link.phone {
+						font-weight: 700;
+						font-size: 36px;
+						line-height: 1.2;
+						color: $c-black;
+					}
+					
+					.contacts__item-subheading-text {
+						font-weight: 600;
+						font-size: 18px;
+						line-height: 1.2;
+						color: $c-dark;
+					}
+
+					.contacts__item-subheading-link.mail {
+						font-weight: 600;
+						font-size: 17px;
+						line-height: 21px;						
+						text-decoration-line: underline;
+						
+						color: $c-accentOrange;
+					}
+				}
+			}
+		}
+	}
+
+	&__name {
+		@media screen and (max-width: $tableWidth) {
+			display: none;
+		}
+	}
+	&__name-link {
+		font-weight: 700;
+		font-size: 15px;
+		line-height: .9;
+		color: $c-accentOrange;
+		text-decoration: none;
+
+		transition: color .3s;
+
+		&:hover {
+			color: $c-hoverOrange;
+		}
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		flex-basis: 60%;
+
+		@media screen and (max-width: 1200px) {
+			flex-direction: column;
+		}
+
+		@media screen and (max-width: $tableWidth) {
+			flex-basis: 100%;
+		}
+	}
+
+	&__item {
+		max-width: 250px;
+
+		@media screen and (max-width: 1200px) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__item-heading {
+		margin-bottom: 16px;
+	}
+
+	&__item-heading-text {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: .8px;
+		color: $c-lightGrey;
+	}
+
+	&__item-subheading-text,
+	&__item-subheading-link {
+		font-weight: 600;
+		font-size: 15px;
+		line-height: 1.6;
+		color: $c-dark;
+	}
+
+	&__item-subheading-link {
+		text-decoration: none;
+	}
+}

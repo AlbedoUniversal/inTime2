@@ -32,6 +32,26 @@ html {
 	}
 }
 
+.black-text {
+	color: $c-dark;
+}
+
+.orange-text {
+	color: $c-accentOrange;
+}
+
+.spacer-xl {
+	height: 150px
+}
+
+.spacer-md {
+	height: 85px
+}
+
+.spacer-sm {
+	height: 40px
+}
+
 @import './utils/style.scss';
 @import './components/header.scss';
 @import './components/grid.scss';
@@ -40,8 +60,8 @@ html {
 
 @import './components/decorBox.scss';
 @import './components/infoBlock.scss';
-@import './components/project-changer.scss';
 @import './components/slider.scss';
-@import './components/more.scss';
 @import './components/map.scss';
 @import './components/textBlock.scss';
+@import './components/aboute.scss';
+@import './components/contactsBlock.scss';

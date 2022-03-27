@@ -1,92 +1,161 @@
-.info-block {
-	display: flex;
-	margin-top: 80px;
-	padding-bottom: 124px;
-
-	border-bottom: 1px solid $c-borderGrey;
-
+.project {
 	@media screen and (max-width: 930px) {
-		flex-direction: column;
-	}
-
-	&--withoutBorder {
-		border-bottom: none;
-		padding-bottom: 50px;
-
-		@media screen and (max-width: 969px) {
-			flex-direction: column;
-		}
-
-		@media screen and (max-width: 930px) {
-			margin-top: 110px;
+		.spacer-md {
+			&:nth-child(3) {
+				display: none;
+			}
 		}
 	}
 
-	&__left,
-	&__right {
-		flex-basis: 50%;
-	}
+	.info-block {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 124px;
+	
+		border-bottom: 1px solid $c-borderGrey;
+	
+	
+		&--withoutBorder {
+			border-bottom: none;
+			padding-bottom: 0px;
 
-	&__heading {
-		@media screen and (max-width: 930px) {
-			margin-bottom: 24px;
+			.spacer-sm {
+				display: none;
+			}
+	
+			@media screen and (max-width: $tableWidth) {
+				.info-block__left {
+					display: none;
+				}
+				.info-block__right {
+					flex-basis: 100%;
+				}
+			}
+
+			@media screen and (max-width: 630px) {
+				.spacer-sm {
+					display: block;
+				}
+			}
 		}
-	}
-
-	&__heading-text {
-		font-size: 64px;
-		line-height: 99%;
-		letter-spacing: -0.01em;
-		font-weight: bold;
-		color: $c-black;
-
-		&--big {
-			font-size: 70px;
-			@media screen and (max-width: 1080px) {
-				font-size: 47px;
-			} 
+	
+		&__right {
+			flex-basis: 60%;
 		}
-
-		&--small {
-			font-size: 46px;
+	
+		&__left {
+	
 		}
-
-		&--mb {
-			margin-bottom: 20px;
-			@media screen and (max-width: 1080px) {
-				font-size: 43px;
-			} 
+	
+		&__left-control {
+			cursor: pointer;
 		}
-
-		@media screen and (max-width: 930px) {
-			font-size: 42px;
+	
+		&__left-control-back {
+			display: block;
+			width: 56px;
+			height: 56px;
+			background-color: $c-white;
+			border-radius: 100%;
+			border: 2px solid $c-light;
+			position: relative;
+	
+			transition: background-color .3s;
+	
+			&:hover {
+				background-color: $c-accentOrange;
+	
+				&::before,
+				&::after {
+					background-color: $c-white;
+				}
+			}
+	
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				height: 10px;
+				width: 2px;
+				background-color: $c-controlBorder;
+				left: calc(50% - 2px);
+			}
+	
+			&::after {
+				transform: rotate(-130deg);
+				top: calc(50% - 9px);
+				border-bottom-left-radius: 6px;
+				border-bottom-right-radius: 6px;
+				border-top-right-radius: 6px;
+			}
+			&::before {
+				top: calc(50% - 3px);
+				transform: rotate(130deg);
+				border-bottom-right-radius: 6px;
+				border-top-right-radius: 6px;
+				border-top-left-radius: 6px;
+			}
 		}
-	}
-
-	&__heading-uptext {
-		margin-bottom: 10px;
-
-		font-weight: bold;
-		font-size: 16px;
-		line-height: 22px;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: #D5D5D5;
-	}
-
-	&__desc-text {
-		@media screen and (max-width: 1080px) {
-			font-size: 17px;
-		} 
-		&:not(:last-child) {
-			margin-bottom: 40px;
+	
+		&__heading {
+			margin-bottom: 18px;
 		}
-		&--bold {
+	
+		&__heading-text {
+			font-size: 64px;
+			line-height: 99%;
+			letter-spacing: -0.01em;
 			font-weight: bold;
 			color: $c-black;
+	
+			&--big {
+				font-size: 70px;
+				@media screen and (max-width: 1080px) {
+					font-size: 47px;
+				} 
+			}
+	
+			&--small {
+				font-size: 46px;
+			}
+	
+			&--mb {
+				margin-bottom: 20px;
+				@media screen and (max-width: 1080px) {
+					font-size: 43px;
+				} 
+			}
+	
+			@media screen and (max-width: 930px) {
+				font-size: 42px;
+			}
 		}
-		&--mb {
-			margin-bottom: 24px;
+	
+		&__heading-uptext {
+			margin-bottom: 10px;
+	
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 22px;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #D5D5D5;
+		}
+	
+		&__desc-text {
+			@media screen and (max-width: 1080px) {
+				font-size: 17px;
+			} 
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
+			&--bold {
+				font-weight: bold;
+				color: $c-black;
+			}
+			&--mb {
+				margin-bottom: 24px;
+			}
 		}
 	}
 }

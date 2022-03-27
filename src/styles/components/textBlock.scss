@@ -1,8 +1,25 @@
 .text-block {
 	display: flex;
 	padding: 54px 24px;
+
+	@media screen and (max-width: $phoneWidth) {
+		flex-direction: column;
+	}
+
+	@media screen and (max-width: $phoneWidth) {
+		padding: 30px 0;
+	}
+
 	&__left {
 		flex-basis: 30%;
+
+		@media screen and (max-width: $tableWidth) {
+			padding-right: 20px;
+		}
+
+		@media screen and (max-width: $phoneWidth) {
+			padding-bottom: 20px;
+		}
 	}
 
 	&__left-text {
@@ -18,8 +35,12 @@
 
 	&__right-text {
 		font-weight: 500;
-		font-size: 25.488px;
+		font-size: 25px;
 		line-height: 130%;
 		color: #222222;
+
+		@media screen and (max-width: $tableWidth) {
+			font-size: 18px;
+		}
 	}
 }

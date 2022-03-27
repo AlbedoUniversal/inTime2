@@ -1,5 +1,5 @@
 .footer {
-	height: 500px;
+	height: 380px;
 	padding-top: 60px;
 	padding-bottom: 20px;
 	margin: 0 auto;
@@ -7,7 +7,7 @@
 	background-color: $c-bgFooter;
 
 	@media screen and (max-width: 725px) {
-		height: 650px;
+		height: 500px;
 	}
 
 	&__container {
@@ -56,8 +56,9 @@
 		}
 	}
 
-	&__about-right {
-		flex-basis: 50%;
+	&__about-right,
+	&__copyright-more {
+		flex-basis: 60%;
 	}
 
 	&__menu-item {
@@ -119,7 +120,7 @@
 	}
 
 	&__mail-link {
-		color: $c-accentGreen;
+		color: $c-accentOrange;
 	}
 
 	&__copyright-link {

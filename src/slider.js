@@ -5,19 +5,10 @@ const slider = tns({
 	mouseDrag: true,
 	swipeAngle: false,
 	speed: 400,
-	gutter: 30,
+	gutter: 0,
 	center: true,
-	controls: false,
+	controls: true,
 	nav: true,
-
-});
-
-slider.events.on("transitionEnd", function(info) {
-  info.slideItems[info.indexCached].classList.remove(
-    "tns-item-center"
-  );
-
-  info.slideItems[info.index].classList.add(
-    "tns-item-center"
-  );
+	prevButton: '.slider-top__previous',
+	nextButton: '.slider-top__next',
 });
