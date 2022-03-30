@@ -1,4 +1,5 @@
 .project {
+	padding-bottom: 60px;
 	@media screen and (max-width: 930px) {
 		.spacer-md {
 			&:nth-child(3) {
@@ -40,7 +41,7 @@
 		}
 	
 		&__right {
-			flex-basis: 60%;
+			flex-basis: 63%;
 		}
 	
 		&__left {
@@ -98,15 +99,15 @@
 		}
 	
 		&__heading {
-			margin-bottom: 18px;
+			margin-bottom: 16px;
 		}
 	
 		&__heading-text {
 			font-size: 64px;
 			line-height: 99%;
 			letter-spacing: -0.01em;
-			font-weight: bold;
-			color: $c-black;
+			font-family: 'Inter-ExtraBold';
+			color: #111111;
 	
 			&--big {
 				font-size: 70px;

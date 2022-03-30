@@ -1,6 +1,6 @@
 
 .gallery {
-	padding-bottom: 42px;
+	padding-bottom: 48px;
 
 	&--desktop {
 		@media screen and (max-width: $tableWidth) {
@@ -16,6 +16,14 @@
 			border-bottom: 1px solid #CACACA;
 		}
 	}
+
+	@media screen and (max-width: $tableWidth) {
+		.spacer-md {
+			display: none;
+		}
+
+	}
+
 
 	.grid {
 		&__heading {
@@ -131,8 +139,8 @@
 		&__box-heading {
 			margin-bottom: 5px;
 
-			font-size: 20px;
-			font-weight: bold;
+			font-size: 15px;
+			font-family: 'Inter-Medium';
 			line-height: 150%;
 			letter-spacing: 0.02em;
 

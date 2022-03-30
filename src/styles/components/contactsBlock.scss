@@ -1,5 +1,8 @@
 .contacts {
-	padding: 50px 0 70px 0;
+	padding: 50px 0 58px 0;
+	@media screen and (max-width: $tableWidth) {
+		padding: 10px 0 40px 0;
+	}
 	.contacts__items--mobile {
 		display: none;
 	}
@@ -75,7 +78,7 @@
 	&__items {
 		display: flex;
 		justify-content: space-between;
-		flex-basis: 60%;
+		flex-basis: 63%;
 
 		@media screen and (max-width: 1200px) {
 			flex-direction: column;
@@ -90,7 +93,9 @@
 		max-width: 250px;
 
 		@media screen and (max-width: 1200px) {
-			margin-bottom: 24px;
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
 		}
 	}
 

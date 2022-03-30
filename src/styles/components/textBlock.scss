@@ -1,6 +1,6 @@
 .text-block {
 	display: flex;
-	padding: 54px 24px;
+	padding: 54px 0 64px 0;
 
 	@media screen and (max-width: $phoneWidth) {
 		flex-direction: column;
@@ -23,10 +23,10 @@
 	}
 
 	&__left-text {
-		font-weight: 700;
-		font-size: 15.93px;
+		font-size: 15px;
 		line-height: 19px;
 		color: #CCCCCC;
+		font-family: 'Inter-Medium';
 	}
 	
 	&__right {

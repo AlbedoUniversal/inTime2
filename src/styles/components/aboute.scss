@@ -21,7 +21,7 @@
 	}
 
 	&__company {
-		flex-basis: 60%;
+		flex-basis: 63%;
 
 		@media screen and (max-width: $tableWidth) {
 			flex-basis: 100%;
@@ -37,7 +37,8 @@
 	}
 
 	&__heading-text {
-		font-weight: 700;
+		font-weight: 900;
+		font-family: 'Inter-ExtraBold';
 		font-size: 105px;
 		line-height: .9;
 		color: $c-accentOrange;
@@ -46,7 +47,7 @@
 		&--small {
 			font-size: 64px;
 			text-transform: capitalize;
-			color: $c-dark;
+			color: #111111;
 		}
 
 		@media screen and (max-width: $tableWidth) {
@@ -56,6 +57,7 @@
 
 	&__subheading-text {
 		font-weight: 500;
+		font-family: 'Inter-Medium';
 		font-size: 25px;
 		line-height: 130%;
 		color: $c-dark;
