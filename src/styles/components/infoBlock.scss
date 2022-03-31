@@ -1,6 +1,7 @@
 .project {
 	padding-bottom: 60px;
 	@media screen and (max-width: 930px) {
+		padding-bottom: 25px;
 		.spacer-md {
 			&:nth-child(3) {
 				display: none;
@@ -37,6 +38,12 @@
 				.spacer-sm {
 					display: block;
 				}
+			}
+		}
+
+		&--head {
+			@media screen and (max-width: 930px) {
+				margin-top: 42px;
 			}
 		}
 	
@@ -106,7 +113,7 @@
 			font-size: 64px;
 			line-height: 99%;
 			letter-spacing: -0.01em;
-			font-family: 'Inter-ExtraBold';
+			font-family: 'Inter-Bold';
 			color: #111111;
 	
 			&--big {

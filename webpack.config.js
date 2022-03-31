@@ -22,7 +22,7 @@ const pages = ['index', 'company', 'contacts', 'projects', 'project'];
 const htmlPages = pages.map(page => {
 	return new HtmlWebpackPlugin({
 		template: `${PATHS.src}/html/${page}.ejs`,
-		filename: `./${page}.html`, // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
+		filename: `html/${page}.html`, // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
 		favicon: `${PATHS.src}/assets/icons/logo.svg`,
 	});
 });
@@ -30,7 +30,7 @@ const htmlPages = pages.map(page => {
 const plugins = [
 	new CleanWebpackPlugin(),
 	new MiniCssExtractPlugin({
-		filename: "[name].[contenthash].css",
+		filename: "styles/[name].[contenthash].css",
 		chunkFilename: "[name].css",
 	}),
 	new HtmlWebpackPlugin({
@@ -63,7 +63,7 @@ module.exports = {
 	output: {
 		filename: 'js/[name].[contenthash].js',
 		path: PATHS.dist,
-		publicPath: './', // devMode ? '/' : '../',
+		publicPath: '/', // devMode ? '/' : '../',
 		// assetModuleFilename: 'src/[name][ext][query]'
 	},
 	stats: { children: true },
@@ -115,23 +115,23 @@ module.exports = {
 			{
 				test: /\.(png|jpg|jpeg|gif)$/i,
 				type: 'asset/resource',
-				// generator: {
-				// 	filename: putFilesToDist('images'),
-				// }
+				generator: {
+					filename: putFilesToDist('images'),
+				}
 			},
 			{
 				test: /\.(svg)$/i,
 				type: 'asset/resource',
-				// generator: {
-				// 	filename: putFilesToDist('icons'),
-				// }
+				generator: {
+					filename: putFilesToDist('icons'),
+				}
 			},
 			{
 				test: /\.(woff|woff2|eot|ttf|otf)$/i,
 				type: 'asset/resource',
-				// generator: {
-				// 	filename: putFilesToDist('fonts'),
-				// }
+				generator: {
+					filename: putFilesToDist('fonts'),
+				}
 			},
 			{
 				test: /\.json$/i,
