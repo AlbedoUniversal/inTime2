@@ -1,4 +1,5 @@
 node_modules/
 .DG_Store/
+.DS_Store
 forDist/
 dist/
