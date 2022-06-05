@@ -45,10 +45,11 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
 
 		@media screen and (max-width: 1300px) {
 			height: inherit;
-			object-fit: cover;
 		}
 		&--company {
 			height: 100%;

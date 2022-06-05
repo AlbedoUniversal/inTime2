@@ -22,7 +22,7 @@ const pages = ['index', 'company', 'contacts', 'projects', 'project'];
 const htmlPages = pages.map(page => {
 	return new HtmlWebpackPlugin({
 		template: `${PATHS.src}/html/${page}.ejs`,
-		filename: `html/${page}.html`, // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
+		filename: `${page}.html`, // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
 		favicon: `${PATHS.src}/assets/icons/logo.svg`,
 	});
 });

@@ -1,14 +1,9 @@
 .footer {
-	height: 420px;
 	padding-top: 60px;
 	padding-bottom: 60px;
 	margin: 0 auto;
 
 	background-color: $c-bgFooter;
-
-	@media screen and (max-width: 725px) {
-		height: 500px;
-	}
 
 	&__container {
 		max-width: $desktopWidth;
@@ -58,7 +53,7 @@
 
 	&__about-right,
 	&__copyright-more {
-		flex-basis: 60%;
+		flex-basis:63%;
 	}
 
 	&__menu-item {
