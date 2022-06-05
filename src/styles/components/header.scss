@@ -347,16 +347,22 @@
 }
 
 .call {
-	&__number {
-		color: $c-dark;
-		font-weight: 700;
-		font-size: 16px;
-		line-height: 19px;
+	&__contacts {
+		padding: 10px 14px;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 1.2;
 
-		transition: color .3s;
+		color: #929292;
+
+		border-radius: 50px;
+		border: 1px solid #C3C3C3;
+
+		transition: color, background-color .3s;
 
 		&:hover {
-			color: $c-activeDark;
+			background-color: $c-hoverOrange;
+			color: $c-white;
 		}
 
 		@media screen and (max-width: 930px) {

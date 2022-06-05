@@ -1,14 +1,9 @@
 .footer {
-	height: 225px;
 	padding-top: 60px;
 	padding-bottom: 60px;
 	margin: 0 auto;
 
 	background-color: $c-bgFooter;
-
-	@media screen and (max-width: 725px) {
-		height: 370px;
-	}
 
 	&__container {
 		max-width: $desktopWidth;
