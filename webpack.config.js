@@ -17,12 +17,12 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const putFilesToDist = folder => devMode ? `${folder}/[name][ext]` : `${folder}/[name].[contenthash][ext]`;
 
-const pages = ['index', 'company', 'contacts', 'projects', 'project'];
+const pages = ['index', 'company', 'contacts', 'project'];
 
 const htmlPages = pages.map(page => {
 	return new HtmlWebpackPlugin({
 		template: `${PATHS.src}/html/${page}.ejs`,
-		filename: `${page}.html`, // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
+		filename: `html/${page}.html`, // dev ? `${page}.html` : html/`${page}.html` 
 		favicon: `${PATHS.src}/assets/icons/logo.svg`,
 	});
 });
@@ -35,7 +35,7 @@ const plugins = [
 	}),
 	new HtmlWebpackPlugin({
 		template: `${PATHS.src}/html/index.ejs`,
-		filename: './index.html', // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
+		filename: 'index.html', // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
 		favicon: `${PATHS.src}/assets/icons/logo.svg`,
 	}),
 
@@ -63,7 +63,7 @@ module.exports = {
 	output: {
 		filename: 'js/[name].[contenthash].js',
 		path: PATHS.dist,
-		publicPath: '/', // devMode ? '/' : '../',
+		publicPath: '/', // devMode ? '/' : './',
 		// assetModuleFilename: 'src/[name][ext][query]'
 	},
 	stats: { children: true },

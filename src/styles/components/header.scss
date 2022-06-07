@@ -1,11 +1,13 @@
 
 .header {
 	width: 100%;
+	margin-bottom: 7px;
 
 	background-color: $c-white;
 	
 	@media screen and (max-width: 930px) {
 		padding: 10px 15px;
+		margin-bottom: 0;
 
 		position: fixed;
 		top: 0;
