@@ -64,6 +64,27 @@
 			z-index: 1;
 			overflow: hidden;
 			text-decoration: none;
+
+			&--more {
+				&:before {
+					transition: opacity .3s;
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 90%;
+					background-color: #ffffff;
+					opacity: 0.5;
+					z-index: 1;
+				}
+			}
+
+			&:hover {
+				&--more {
+					&:before {
+						opacity: 0;
+					}
+				}
+			}
 			
 
 			&--action {
@@ -71,13 +92,6 @@
 			}
 
 			&:hover {
-				.grid__box-decor {
-					&--more {
-						&:before {
-							opacity: 0;
-						}
-					}
-				}
 				.grid__box-img {
 					transition: transform .3s ease-in;
 					transform: scale(1.2);
@@ -112,21 +126,6 @@
 			height: 364px;
 			overflow: hidden;
 			margin-bottom: 16px;
-
-			&--more {
-				&:before {
-					transition: opacity .3s;
-					content: '';
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					background-color: #ffffff;
-					opacity: 0.5;
-					z-index: 1;
-				}
-			}
-
-
 
 			@media screen and (max-width: 1300px) {
 				height: 300px;
